@@ -1,0 +1,4 @@
+# 12
+# -d for run in background, -v for stock in Volume X, -e for set Env Variables
+# docker volume inspect VOLUME hatchery
+docker run -d --restart=on-failure --name spawning-pool -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings -v hatchery:/var/lib/mysql mysql
