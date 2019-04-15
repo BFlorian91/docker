@@ -1,4 +1,13 @@
 # 12
 # -d for run in background, -v for stock in Volume X, -e for set Env Variables
 # docker volume inspect VOLUME hatchery
-docker run -d --restart=on-failure --name spawning-pool -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings -v hatchery:/var/lib/mysql mysql
+
+# To fix error with database connection with mysql 8 and newer version of Wordpress
+# You need to modify the authentification plugin in mysql
+# Run the followings commands
+# $ docker exec -it spawning-pool bash
+# $ bash: mysql --user=root --password=Kerrigan
+# $ bash: mysql> ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'Kerrigan';
+
+docker run --name spawning-pool --restart on-failure -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings -v hatchery:/var/lib/mysql -d mysql
+
