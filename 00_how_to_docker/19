@@ -1,0 +1,24 @@
+# run en iteractive avec -it,
+# --name set name
+# bind du root de la machine au root du container avec -v
+# -p pour rediriger le port 3000 du container vers le 3000 de l'host
+# lancement de bash
+
+docker run -it --name Abathur -v root:/root -p 3000:3000 python:2-slim bash
+
+# apt-get update pour update les packets dispo
+# apt-get install vim -y 
+# pip install flask
+# cd root + vim hello.py
+# from flask import Flask
+
+# app = Flask(__name__)
+
+# @app.route('/')
+# def index():
+#    return ('<!doctype html><html><head></head><body><h1>Hello world</h1></body></html>')
+
+# if __name__ == "__main__":
+#    app.run(host='0.0.0.0', port=3000)
+#
+# python /root/hello.py
