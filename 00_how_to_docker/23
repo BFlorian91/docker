@@ -1,0 +1,7 @@
+# 23
+# Note: It is highly recommended to use the --subnet option when creating a network. 
+# If the --subnet is not specified, Docker automatically chooses and assigns a subnet for the network 
+# and it could overlap with another subnet in your infrastructure that is not managed by Docker. 
+# Such overlaps can cause connectivity issues or failures when containers are connected to that network.
+
+docker network create --driver overlay --subnet=10.0.9.0/24 overmind
