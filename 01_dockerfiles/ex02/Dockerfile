@@ -1,12 +1,8 @@
-FROM ruby
+FROM ft-rails:on-build
 
 EXPOSE 3000
+CMD [ "rails" , "s", "-b", "0.0.0.0", "-p", "3000"]
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y nodejs && \
-    gem install rails
-    
-WORKDIR /opt/app
+# docker build -t ex02 .
 
-ADD /app /opt/app
+# docker run -it --rm -p 3000:3000 ex02
