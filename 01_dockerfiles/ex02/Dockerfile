@@ -1,5 +1,5 @@
 ############################### Testing ####################################
-# $ git clone https://github.com/acuD1/rails-docker-1-app.git app
+# $ git clone https://github.com/BFlorian91/blog_testing app
 # $ docker build -t ft-rails:on-build .
 #
 ## Create the Dockerfile from the subject
