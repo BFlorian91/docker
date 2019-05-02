@@ -29,7 +29,9 @@ RUN echo "nginx['ssl_certificate_key'] = \"/etc/gitlab/ssl/self-signed.key\"" >>
 # SSH config
 RUN echo "gitlab_rails['gitlab_shell_ssh_port'] = 2222" >> /etc/gitlab/gitlab.rb
 
-ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure && gitlab-ctl tail
+ENTRYPOINT service ssh start && (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure && gitlab-ctl tail
 
 
+# docker build -t ex03 .
+# docker run --name -it -p 80:80 -p 2222:22 -p 443:443 --privileged ex03
 # git config --global http.sslVerify false
