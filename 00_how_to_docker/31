@@ -1,3 +1,3 @@
 # 31
 
-docker service rm ID                  NAME                MODE                REPLICAS            IMAGE               PORTS
+docker service rm $(docker service ls -q)
