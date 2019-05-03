@@ -20,7 +20,7 @@ RUN gem install rails bundler
 COPY app /opt/app
 WORKDIR /opt/app
 
-# install rake,...
+# install gems
 ONBUILD RUN bundler install
 # migrate database
 ONBUILD RUN rake db:migrate
