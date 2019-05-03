@@ -1,5 +1,3 @@
-##42-docker-1
-Docker. The bases to understand the idea of containerization of services.
 # 42-docker-1
 ## Docker. The bases to understand the idea of containerization of services.
 
