@@ -17,8 +17,8 @@ clean:
 	@echo "$(RED)** Container deleted **$(NC)"
 	@docker container rm -f Node-Environment
 
-fclean: clean
+fclean: 
 	@echo "$(RED)** Image / app are deleted **$(NC)"
-	@docker image rm node 
-	@docker image rm ft-node 
+	@docker image rm $(docker image ls) 
 	@rm -rf app
+	@clean
