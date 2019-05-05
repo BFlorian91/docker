@@ -1,3 +1,4 @@
+# 19
 # run en iteractive avec -it,
 # --name set name
 # bind du root de la machine au root du container avec -v
