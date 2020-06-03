@@ -1,3 +1,0 @@
-# 03 export env variable
-
-eval $(docker-machine env Char)

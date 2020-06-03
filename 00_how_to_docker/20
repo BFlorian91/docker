@@ -1,5 +1,0 @@
-# 20
-# start service for check the swarm <3
-# docker service create --name vizual --publish 1111:8080/tcp --constraint=node.role==manager --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock dockersamples/visualizer
-
-docker swarm init --advertise-addr 192.168.99.100

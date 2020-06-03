@@ -1,6 +1,0 @@
-# 08
-# --rm remove container when is closed
-# -i iteractive
-# -t alocate a pseudo tty, a sort of terminal emulation 
-
-docker run --rm -it alpine /bin/sh

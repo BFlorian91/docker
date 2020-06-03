@@ -1,3 +1,0 @@
-# 13 show ENV var of spawning-pool
-
-docker exec spawning-pool env
