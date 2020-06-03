@@ -1,0 +1,4 @@
+# 09
+# start the machine like that: docker run -it --rm debian /bin/bash
+apt-get update && apt-get upgrade -y
+apt-get install git gcc -y

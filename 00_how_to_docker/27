@@ -1,0 +1,3 @@
+# 27
+
+docker service logs engineering-bay -f
